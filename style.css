@@ -1,0 +1,251 @@
+/* LANJUTAN STYLE.CSS */
+
+/* --- Custom Scrollbar --- */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold-dark);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* --- Preloader --- */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-primary);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--gold);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+.loader-line {
+    width: 150px;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gold);
+    animation: load 1.5s infinite linear;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes load {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* --- Mobile Menu Overlay --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-medium);
+    z-index: 999;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* --- Enhanced Responsive Styles --- */
+@media (max-width: 576px) {
+    :root {
+        --section-padding: 60px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    nav {
+        padding: 20px;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .about-content {
+        gap: 40px;
+    }
+    
+    .image-frame {
+        height: 300px;
+        padding: 10px;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+        padding-bottom: 15px;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- Additional Hover Effects --- */
+.text-gold {
+    background: linear-gradient(to right, var(--gold), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Smooth Scroll Fix */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    
+    .fade-in, 
+    .preloader, 
+    .scroll-indicator {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* --- Selection Color --- */
+::selection {
+    background: var(--gold);
+    color: var(--bg-primary);
+}
+
+/* --- Fix for Inputs on Mobile --- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--white);
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-primary) inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* --- Loading State for Images --- */
+img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
+}
+
+/* --- Floating Elements Animation --- */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* --- Gold Border Animation --- */
+.gold-border {
+    position: relative;
+}
+
+.gold-border::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.gold-border:hover::after {
+    transform: scaleX(1);
+}
