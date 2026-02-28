@@ -1,16 +1,492 @@
-<!doctype html>
-<html lang="">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Mewah</title>
-    <meta name="description" content="" />
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Wijaya | Portofolio Desainer & Developer</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <div class="loading-content">
+            <div class="loading-logo">AW</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Arya</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#portfolio" class="nav-link">Portofolio</a></li>
+                <li><a href="#skills" class="nav-link">Skill</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-subtitle" data-aos="fade-up">
+                <span class="line"></span>
+                <span class="text">Desainer & Developer</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                <span class="title-line">Menciptakan</span>
+                <span class="title-line highlight">Karya Digital</span>
+                <span class="title-line">yang Memukau</span>
+            </h1>
+            <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                Saya adalah desainer grafis dan developer web dengan pengalaman 8+ tahun 
+                menciptakan pengalaman digital yang elegan dan fungsional.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#portfolio" class="btn btn-primary">
+                    <span>Lihat Portofolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Hubungi Saya</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="127">0</span>
+                    <span class="stat-label">Proyek Selesai</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="85">0</span>
+                    <span class="stat-label">Klien Puas</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-label">Tahun Pengalaman</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Tentang Saya</span>
+                <h2 class="section-title">Kisah Perjalanan Kreatif</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="experience-badge">
+                            <span class="badge-number">8+</span>
+                            <span class="badge-text">Tahun<br>Pengalaman</span>
+                        </div>
+                    </div>
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 class="about-title">Halo, Saya Arya Wijaya</h3>
+                    <p class="about-description">
+                        Seorang desainer grafis dan developer web yang berbasis di Jakarta, Indonesia. 
+                        Saya memiliki passion dalam menciptakan desain yang tidak hanya indah secara 
+                        visual, tetapi juga memberikan pengalaman pengguna yang luar biasa.
+                    </p>
+                    <p class="about-description">
+                        Dengan pengalaman lebih dari 8 tahun di industri kreatif, saya telah membantu 
+                        berbagai brand dari startup hingga perusahaan besar untuk mewujudkan visi 
+                        digital mereka.
+                    </p>
+                    <div class="about-services">
+                        <div class="service-item">
+                            <i class="fas fa-palette"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-code"></i>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-pen-nib"></i>
+                            <span>Branding</span>
+                        </div>
+                        <div class="service-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>App Design</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <span>Mari Bekerja Sama</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Portofolio</span>
+                <h2 class="section-title">Karya Terbaik Saya</h2>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">App Design</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Web Design</span>
+                                    <h3 class="portfolio-title">E-Commerce Luxury</h3>
+                                    <p class="portfolio-desc">Platform belanja premium dengan UI elegan</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image branding-1">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Branding</span>
+                                    <h3 class="portfolio-title">Brand Identity Tech</h3>
+                                    <p class="portfolio-desc">Identitas visual untuk startup teknologi</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image app-1">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">App Design</span>
+                                    <h3 class="portfolio-title">Fintech Mobile App</h3>
+                                    <p class="portfolio-desc">Aplikasi keuangan dengan UX intuitif</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image web-2">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Web Design</span>
+                                    <h3 class="portfolio-title">Corporate Website</h3>
+                                    <p class="portfolio-desc">Website perusahaan dengan animasi modern</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image branding-2">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">Branding</span>
+                                    <h3 class="portfolio-title">Restaurant Brand</h3>
+                                    <p class="portfolio-desc">Branding untuk restoran fine dining</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image app-2">
+                            <div class="image-overlay">
+                                <div class="portfolio-content">
+                                    <span class="portfolio-category">App Design</span>
+                                    <h3 class="portfolio-title">Health Tracker</h3>
+                                    <p class="portfolio-desc">Aplikasi pelacak kesehatan dan fitness</p>
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Keahlian</span>
+                <h2 class="section-title">Skill & Expertise</h2>
+            </div>
+            <div class="skills-content">
+                <div class="skills-text">
+                    <h3>Keahlian yang Saya Kuasai</h3>
+                    <p>
+                        Dengan pengalaman bertahun-tahun, saya telah mengembangkan 
+                        keahlian dalam berbagai bidang desain dan development.
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-figma"></i>
+                        </div>
+                        <h4 class="skill-name">UI/UX Design</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="95%"></div>
+                        </div>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4 class="skill-name">HTML/CSS</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="98%"></div>
+                        </div>
+                        <span class="skill-percent">98%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                        </div>
+                        <h4 class="skill-name">JavaScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90%"></div>
+                        </div>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <h4 class="skill-name">React</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85%"></div>
+                        </div>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <h4 class="skill-name">Adobe Creative</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="92%"></div>
+                        </div>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon">
+                            <i class="fas fa-pen-nib"></i>
+                        </div>
+                        <h4 class="skill-name">Branding</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="88%"></div>
+                        </div>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Kontak</span>
+                <h2 class="section-title">Mari Bekerja Sama</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <p>arya.wijaya@email.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Telepon</h4>
+                        <p>+62 812 3456 7890</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4>Lokasi</h4>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="name" placeholder=" " required>
+                            <label for="name" class="form-label">Nama Lengkap</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" id="email" placeholder=" " required>
+                            <label for="email" class="form-label">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" id="subject" placeholder=" " required>
+                            <label for="subject" class="form-label">Subjek</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input form-textarea" id="message" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Pesan</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">
+                        <span class="logo-text">Arya</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-desc">
+                        Desainer & Developer yang menciptakan pengalaman digital 
+                        yang memukau dan fungsional.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#portfolio">Portofolio</a></li>
+                        <li><a href="#skills">Skill</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">App Design</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Newsletter</h4>
+                    <p>Berlangganan untuk update terbaru</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email Anda">
+                        <button type="submit">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Arya Wijaya. All Rights Reserved.</p>
+                <p>Dibuat dengan <i class="fas fa-heart"></i> di Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
 </html>
