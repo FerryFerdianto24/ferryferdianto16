@@ -190,8 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const fx = new TextScramble(scrambleText);
         let counter = 0;
         const phrases = [
-            'Desainer & Developer',
-            'UI/UX Designer',
+            'Desainer',
+            'IT TECHNICIAN',
             'Web Developer',
             'Creative Thinker'
         ];
