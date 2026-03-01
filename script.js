@@ -342,26 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ========================================
     // CONTACT FORM
     // ========================================
-    const contactForm = document.getElementById('contact-form');
-    
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-        
-        // Simple validation
-        if (name && email && subject && message) {
-            // Show success message (in real implementation, send to server)
-            alert('Terima kasih! Pesan Anda telah terkirim. Saya akan menghubungi Anda segera.');
-            contactForm.reset();
-        } else {
-            alert('Mohon lengkapi semua field.');
-        }
-    });
+
     
     // ========================================
     // NEWSLETTER FORM
