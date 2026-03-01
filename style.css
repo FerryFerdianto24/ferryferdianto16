@@ -738,12 +738,12 @@ section {
 
 .about-image {
     position: relative;
-    order: 1;
+   
 }
 
 @media (min-width: 992px) {
     .about-image {
-        order: 0;
+    
     }
 }
 
@@ -885,12 +885,12 @@ section {
 }
 
 .about-text {
-    order: 0;
+
 }
 
 @media (min-width: 992px) {
     .about-text {
-        order: 1;
+        
     }
 }
 
