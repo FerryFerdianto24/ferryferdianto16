@@ -409,27 +409,34 @@
                 </div>
                
                 <div class="contact-form-wrapper">
-                    <form action="https://formspree.io/f/maqdzeba" method="POST" class="contact-form"></form>
-                        <div class="form-group">
-                            <input type="text" class="form-input" id="name" placeholder=" " required>
-                            <label for="name" class="form-label">Nama Lengkap</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" class="form-input" id="email" placeholder=" " required>
-                            <label for="email" class="form-label">Email</label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-input" id="subject" placeholder=" " required>
-                            <label for="subject" class="form-label">Subjek</label>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-input form-textarea" id="message" placeholder=" " required></textarea>
-                            <label for="message" class="form-label">Pesan</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">
-                            <span>Kirim Pesan</span>
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
+                    <form action="https://formspree.io/f/maqdzeba" method="POST" class="contact-form">
+
+    <div class="form-group">
+        <input type="text" name="name" id="name" class="form-input" placeholder=" " required>
+        <label for="name" class="form-label">Nama Lengkap</label>
+    </div>
+
+    <div class="form-group">
+        <input type="email" name="email" id="email" class="form-input" placeholder=" " required>
+        <label for="email" class="form-label">Email</label>
+    </div>
+
+    <div class="form-group">
+        <input type="text" name="subject" id="subject" class="form-input" placeholder=" " required>
+        <label for="subject" class="form-label">Subjek</label>
+    </div>
+
+    <div class="form-group">
+        <textarea name="message" id="message" class="form-input form-textarea" placeholder=" " required></textarea>
+        <label for="message" class="form-label">Pesan</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-full">
+        <span>Kirim Pesan</span>
+        <i class="fas fa-paper-plane"></i>
+    </button>
+
+</form>
                     </form>
                 </div>
             </div>
