@@ -1,34 +1,1037 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Ferry Ferdianto</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="CV Ferry Ferdianto - IT Technician & Web Designer">
+    <meta name="theme-color" content="#0f0f1a">
+    <title>CV | Ferry Ferdianto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ========================================
+           CSS VARIABLES
+           ======================================== */
+        :root {
+            --primary-color: #c9a227;
+            --primary-dark: #a88420;
+            --secondary-color: #1a1a2e;
+            --accent-color: #e94560;
+            --bg-dark: #0f0f1a;
+            --bg-light: #16213e;
+            --text-light: #ffffff;
+            --text-gray: #b8b8b8;
+            --text-dark: #1a1a2e;
+            --gradient-1: linear-gradient(135deg, #c9a227 0%, #e94560 100%);
+            --gradient-2: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow-glow: 0 0 40px rgba(201, 162, 39, 0.3);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        /* ========================================
+           RESET & BASE
+           ======================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ========================================
+           LOADING SCREEN
+           ======================================== */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loading-content {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .loading-logo {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 8vw, 4rem);
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .loading-bar {
+            width: min(200px, 60vw);
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .loading-progress {
+            height: 100%;
+            background: var(--gradient-1);
+            border-radius: 2px;
+            animation: loading 2s ease-in-out infinite;
+        }
+
+        @keyframes loading {
+            0% { width: 0%; transform: translateX(-100%); }
+            50% { width: 100%; transform: translateX(0); }
+            100% { width: 100%; transform: translateX(100%); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ========================================
+           CUSTOM CURSOR
+           ======================================== */
+        .cursor,
+        .cursor-follower {
+            display: none;
+        }
+
+        @media (pointer: fine) {
+            .cursor {
+                width: 12px;
+                height: 12px;
+                background: var(--primary-color);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9998;
+                mix-blend-mode: difference;
+                transition: transform 0.1s ease;
+                display: block;
+            }
+
+            .cursor-follower {
+                width: 40px;
+                height: 40px;
+                border: 2px solid var(--primary-color);
+                border-radius: 50%;
+                position: fixed;
+                pointer-events: none;
+                z-index: 9997;
+                transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
+                display: block;
+            }
+
+            .cursor.hover {
+                transform: scale(2);
+            }
+
+            .cursor-follower.hover {
+                width: 60px;
+                height: 60px;
+                border-color: var(--accent-color);
+            }
+        }
+
+        /* ========================================
+           NAVIGATION
+           ======================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-text {
+            color: var(--text-light);
+        }
+
+        .logo-dot {
+            color: var(--primary-color);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-gray);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-1);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--text-light);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            border-radius: 3px;
+            transition: var(--transition);
+        }
+
+        .nav-toggle.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .nav-toggle.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .nav-toggle.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100vh;
+                background: rgba(15, 15, 26, 0.98);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-link {
+                font-size: 1.2rem;
+                padding: 10px 20px;
+            }
+
+            .nav-toggle {
+                display: flex;
+            }
+        }
+
+        /* ========================================
+           BUTTONS
+           ======================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+            font-weight: 500;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 12px 22px;
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: var(--text-light);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--glass-border);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary-color);
+            background: var(--glass-bg);
+            transform: translateY(-3px);
+        }
+
+        /* ========================================
+           BACKGROUND ORBS
+           ======================================== */
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .gradient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: min(500px, 80vw);
+            height: min(500px, 80vw);
+            background: var(--primary-color);
+            top: -150px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: min(400px, 70vw);
+            height: min(400px, 70vw);
+            background: var(--accent-color);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: -3s;
+        }
+
+        .orb-3 {
+            width: min(300px, 50vw);
+            height: min(300px, 50vw);
+            background: #4a90d9;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation-delay: -6s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -30px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        /* ========================================
+           CV SECTION
+           ======================================== */
+        .cv-section {
+            min-height: 100vh;
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cv-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cv-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .cv-title .highlight {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cv-subtitle {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .cv-viewer {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .cv-iframe {
+            width: 100%;
+            height: 700px;
+            border: none;
+            border-radius: 10px;
+            background: var(--bg-light);
+        }
+
+        .cv-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cv-note {
+            text-align: center;
+            margin-top: 30px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .cv-note i {
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .cv-iframe {
+                height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cv-section {
+                padding: 100px 15px 60px;
+            }
+
+            .cv-viewer {
+                padding: 10px;
+            }
+
+            .cv-iframe {
+                height: 400px;
+            }
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+        .footer {
+            background: var(--bg-light);
+            padding: 60px 0 25px;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        @media (min-width: 768px) {
+            .footer {
+                padding: 80px 0 30px;
+            }
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 35px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 576px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .footer-content {
+                grid-template-columns: 2fr 1fr 1fr 1.5fr;
+                gap: 40px;
+            }
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .footer-desc {
+            color: var(--text-gray);
+            line-height: 1.8;
+            max-width: 300px;
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        }
+
+        .footer-links h4 {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links ul li a {
+            color: var(--text-gray);
+            transition: var(--transition);
+            font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter h4 {
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .footer-newsletter p {
+            color: var(--text-gray);
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: var(--text-gray);
+            transition: var(--transition);
+        }
+
+        @media (min-width: 768px) {
+            .social-link {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .social-link:hover {
+            background: var(--gradient-1);
+            border-color: transparent;
+            color: var(--text-light);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding-top: 25px;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-gray);
+            font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+            text-align: center;
+        }
+
+        @media (min-width: 576px) {
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+
+        .footer-bottom i {
+            color: var(--accent-color);
+        }
+
+        /* ========================================
+           BACK TO TOP BUTTON
+           ======================================== */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-1);
+            border: none;
+            border-radius: 50%;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .back-to-top {
+                bottom: 30px;
+                right: 30px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(201, 162, 39, 0.5);
+        }
+
+        /* ========================================
+           CUSTOM SCROLLBAR
+           ======================================== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        @media (min-width: 768px) {
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-1);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ========================================
+           SELECTION
+           ======================================== */
+        ::selection {
+            background: var(--primary-color);
+            color: var(--text-light);
+        }
+
+        /* ========================================
+           REDUCED MOTION
+           ======================================== */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            html {
+                scroll-behavior: auto;
+            }
+        }
+
+        /* Focus styles for accessibility */
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+    </style>
+<base target="_blank">
 </head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loading">
+        <div class="loading-content">
+            <div class="loading-logo">Ferry Ferdianto</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
 
-<body style="background:#0f172a; padding:40px; text-align:center;">
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
 
-<h1 style="color:white; margin-bottom:30px;">Curriculum Vitae</h1>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">Ferry Ferdianto</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Beranda</a></li>
+                <li><a href="index.html#about" class="nav-link">Tentang</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Portofolio</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skill</a></li>
+                <li><a href="index.html#contact" class="nav-link">Kontak</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-<iframe 
-    src="CV-Ferry-Ferdianto.pdf" 
-    width="100%" 
-    height="600px"
-    style="border-radius:10px;">
-</iframe>
+    <!-- CV Section -->
+    <section class="cv-section">
+        <!-- Background Orbs -->
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
 
-<br><br>
+        <div class="cv-container">
+            <div class="cv-header">
+                <h1 class="cv-title">
+                    <span class="highlight">Curriculum</span> Vitae
+                </h1>
+                <p class="cv-subtitle">Lihat dan unduh CV saya dalam format PDF</p>
+            </div>
 
-<a href="CV-Ferry-Ferdianto.pdf" download class="btn btn-primary">
-    Download CV (PDF)
-</a>
+            <div class="cv-viewer">
+                <iframe 
+                    src="CV-Ferry-Ferdianto.pdf" 
+                    class="cv-iframe"
+                    title="CV Ferry Ferdianto">
+                </iframe>
+            </div>
 
-<br><br>
+            <div class="cv-actions">
+                <a href="CV-Ferry-Ferdianto.pdf" download class="btn btn-primary">
+                    <i class="fas fa-download"></i>
+                    <span>Download CV (PDF)</span>
+                </a>
+                <a href="index.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i>
+                    <span>Kembali ke Beranda</span>
+                </a>
+            </div>
 
-<a href="index.html" class="btn btn-outline">
-    ← Kembali ke Beranda
-</a>
+            <p class="cv-note">
+                <i class="fas fa-info-circle"></i>
+                Jika PDF tidak terlihat, silakan download menggunakan tombol di atas.
+            </p>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-text">Ferry Ferdianto</span>
+                        <span class="logo-dot">.</span>
+                    </a>
+                    <p class="footer-desc">
+                        Desainer & IT Technician yang menciptakan pengalaman digital 
+                        yang memukau dan fungsional.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>Menu</h4>
+                    <ul>
+                        <li><a href="index.html#home">Beranda</a></li>
+                        <li><a href="index.html#about">Tentang</a></li>
+                        <li><a href="index.html#portfolio">Portofolio</a></li>
+                        <li><a href="index.html#skills">Skill</a></li>
+                        <li><a href="index.html#contact">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">IT Technician</a></li>
+                        <li><a href="#">Branding</a></li>
+                        <li><a href="#">Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Kontak</h4>
+                    <p>ferryferianto1624@gmail.com</p>
+                    <p>+62 857 4530 7955</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ferry Ferdianto. All Rights Reserved.</p>
+                <p>Dibuat dengan <i class="fas fa-heart"></i> di Indonesia</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // ========================================
+        // LOADING SCREEN
+        // ========================================
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hidden');
+            }, 1000);
+        });
+
+        // ========================================
+        // CUSTOM CURSOR
+        // ========================================
+        const cursor = document.getElementById('cursor');
+        const cursorFollower = document.getElementById('cursor-follower');
+
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', function(e) {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top = e.clientY + 'px';
+                
+                setTimeout(function() {
+                    cursorFollower.style.left = e.clientX + 'px';
+                    cursorFollower.style.top = e.clientY + 'px';
+                }, 100);
+            });
+
+            // Hover effect on interactive elements
+            const interactiveElements = document.querySelectorAll('a, button, .btn');
+            interactiveElements.forEach(function(el) {
+                el.addEventListener('mouseenter', function() {
+                    cursor.classList.add('hover');
+                    cursorFollower.classList.add('hover');
+                });
+                el.addEventListener('mouseleave', function() {
+                    cursor.classList.remove('hover');
+                    cursorFollower.classList.remove('hover');
+                });
+            });
+        }
+
+        // ========================================
+        // NAVBAR SCROLL EFFECT
+        // ========================================
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ========================================
+        // MOBILE MENU TOGGLE
+        // ========================================
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', function() {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(function(link) {
+            link.addEventListener('click', function() {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // ========================================
+        // BACK TO TOP BUTTON
+        // ========================================
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
