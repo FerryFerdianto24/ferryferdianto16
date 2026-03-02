@@ -1802,3 +1802,8 @@ textarea:focus-visible {
         min-height: -webkit-fill-available;
     }
 }
+
+.contact-card {
+    text-decoration: none;
+    color: inherit;
+}
