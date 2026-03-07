@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Bella Vista | Fine Dining Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">LBV</span>
+                <span class="logo-text">La Bella Vista</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#chef">Chef</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#reservation" class="btn btn-primary">Reserve Table</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Welcome to</span>
+            <h1 class="hero-title">La Bella Vista</h1>
+            <p class="hero-desc">Experience the art of fine dining with our exquisite Italian cuisine, crafted with passion and the finest ingredients.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#reservation" class="btn btn-outline">Make Reservation</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-frame">
+                    <div class="about-img-placeholder">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <span class="section-tag">Our Story</span>
+                <h2 class="section-title">A Culinary Journey Since 1995</h2>
+                <p>La Bella Vista was founded with a simple mission: to bring the authentic flavors of Italy to your table. For over 25 years, we have been serving traditional Italian dishes made with love and the freshest ingredients.</p>
+                <p>Our chefs are trained in the heart of Italy, bringing centuries-old recipes and techniques to create an unforgettable dining experience.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="stat-num">25+</span>
+                        <span class="stat-text">Years Experience</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-text">Signature Dishes</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">15</span>
+                        <span class="stat-text">Expert Chefs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <div class="section-header">
+            <span class="section-tag">Our Menu</span>
+            <h2 class="section-title">Culinary Delights</h2>
+        </div>
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-tab="appetizers">Appetizers</button>
+            <button class="tab-btn" data-tab="mains">Main Course</button>
+            <button class="tab-btn" data-tab="desserts">Desserts</button>
+            <button class="tab-btn" data-tab="drinks">Drinks</button>
+        </div>
+        <div class="menu-content">
+            <div class="menu-grid active" id="appetizers">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Bruschetta Classica</h4>
+                        <p>Grilled bread topped with fresh tomatoes, garlic, and basil</p>
+                    </div>
+                    <span class="menu-price">$12</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Carpaccio di Manzo</h4>
+                        <p>Thinly sliced beef with arugula, parmesan, and truffle oil</p>
+                    </div>
+                    <span class="menu-price">$18</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Burrata e Pomodoro</h4>
+                        <p>Fresh burrata cheese with heirloom tomatoes and pesto</p>
+                    </div>
+                    <span class="menu-price">$16</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Calamari Fritti</h4>
+                        <p>Crispy fried calamari with lemon aioli</p>
+                    </div>
+                    <span class="menu-price">$15</span>
+                </div>
+            </div>
+            <div class="menu-grid" id="mains">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Osso Buco alla Milanese</h4>
+                        <p>Braised veal shank with saffron risotto</p>
+                    </div>
+                    <span class="menu-price">$42</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Lobster Ravioli</h4>
+                        <p>Homemade ravioli filled with lobster in champagne sauce</p>
+                    </div>
+                    <span class="menu-price">$38</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Branzino al Sale</h4>
+                        <p>Whole sea bass baked in sea salt crust</p>
+                    </div>
+                    <span class="menu-price">$45</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Filetto al Tartufo</h4>
+                        <p>Beef tenderloin with black truffle and red wine reduction</p>
+                    </div>
+                    <span class="menu-price">$52</span>
+                </div>
+            </div>
+            <div class="menu-grid" id="desserts">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Tiramisu Classico</h4>
+                        <p>Traditional Italian dessert with mascarpone and espresso</p>
+                    </div>
+                    <span class="menu-price">$12</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Panna Cotta</h4>
+                        <p>Vanilla bean panna cotta with berry compote</p>
+                    </div>
+                    <span class="menu-price">$10</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Cannoli Siciliani</h4>
+                        <p>Crispy pastry tubes filled with sweet ricotta</p>
+                    </div>
+                    <span class="menu-price">$9</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Gelato Artigianale</h4>
+                        <p>Artisanal gelato selection of three flavors</p>
+                    </div>
+                    <span class="menu-price">$8</span>
+                </div>
+            </div>
+            <div class="menu-grid" id="drinks">
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Chianti Classico</h4>
+                        <p>Full-bodied Tuscan red wine</p>
+                    </div>
+                    <span class="menu-price">$65</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Prosecco DOC</h4>
+                        <p>Italian sparkling wine, crisp and refreshing</p>
+                    </div>
+                    <span class="menu-price">$45</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Negroni</h4>
+                        <p>Classic cocktail with gin, Campari, and vermouth</p>
+                    </div>
+                    <span class="menu-price">$14</span>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-info">
+                        <h4>Aperol Spritz</h4>
+                        <p>Refreshing Italian aperitif cocktail</p>
+                    </div>
+                    <span class="menu-price">$12</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chef Section -->
+    <section class="chef" id="chef">
+        <div class="chef-container">
+            <div class="chef-content">
+                <span class="section-tag">Executive Chef</span>
+                <h2 class="section-title">Marco Rossi</h2>
+                <p class="chef-quote">"Cooking is an art, but all art requires knowing something about the techniques and materials."</p>
+                <p>With over 20 years of experience in Michelin-starred restaurants across Italy and Europe, Chef Marco brings his passion for authentic Italian cuisine to La Bella Vista.</p>
+                <div class="chef-awards">
+                    <div class="award">
+                        <i class="fas fa-award"></i>
+                        <span>Michelin Star</span>
+                    </div>
+                    <div class="award">
+                        <i class="fas fa-star"></i>
+                        <span>Best Chef 2023</span>
+                    </div>
+                </div>
+            </div>
+            <div class="chef-image">
+                <div class="chef-img-placeholder">
+                    <i class="fas fa-user-tie"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="section-header">
+            <span class="section-tag">Gallery</span>
+            <h2 class="section-title">Our Atmosphere</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-placeholder">
+                    <i class="fas fa-image"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation" id="reservation">
+        <div class="reservation-container">
+            <div class="reservation-info">
+                <span class="section-tag">Reservations</span>
+                <h2 class="section-title">Book Your Table</h2>
+                <p>Reserve your table for an unforgettable dining experience. For special occasions or large groups, please contact us directly.</p>
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (555) 234-5678</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>reservations@labellavista.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Open Daily: 5:00 PM - 11:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            <form class="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Number of Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Time</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                            <option value="21:00">9:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Special Requests" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">LBV</span>
+                    <span class="logo-text">La Bella Vista</span>
+                </a>
+                <p>Experience the finest Italian cuisine in an elegant atmosphere.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Reservations</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li>123 Gourmet Avenue</li>
+                    <li>New York, NY 10001</li>
+                    <li>+1 (555) 234-5678</li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 La Bella Vista. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
