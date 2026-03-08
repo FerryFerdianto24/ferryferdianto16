@@ -340,11 +340,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ========================================
-    // CONTACT FORM
-    // ========================================
-
-    
-    // ========================================
     // NEWSLETTER FORM
     // ========================================
     const newsletterForm = document.querySelector('.newsletter-form');
